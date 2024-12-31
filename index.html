@@ -10,11 +10,74 @@
 				background: #330033;
 				color: #cccccc;
 			}
+			
+			#happy {
+				-webkit-transition: all 0.5s ease;
+				-moz-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+				opacity: 0;
+				z-index: 1;
+			}
+			
+			#normal {
+				-webkit-transition: all 0.5s ease;
+				-moz-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+				opacity: 1;
+				z-index: 2;
+			}
+			
+			#dizzy {
+				-webkit-transition: all 0.5s ease;
+				-moz-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+				opacity: 0;
+				z-index: 0;
+			}
 		</style>
+		<script type="text/javascript">
+			function showDizzy() {
+				document.getElementById("happy").style.zIndex = "0";
+				document.getElementById("happy").style.opacity = "0";
+				
+				document.getElementById("normal").style.zIndex = "1";
+				document.getElementById("normal").style.opacity = "0";
+				
+				document.getElementById("dizzy").style.zIndex = "2";
+				document.getElementById("dizzy").style.opacity = "1";
+			}
+			
+			function showHappy() {
+				document.getElementById("happy").style.zIndex = "2";
+				document.getElementById("happy").style.opacity = "1";
+				
+				document.getElementById("normal").style.zIndex = "1";
+				document.getElementById("normal").style.opacity = "0";
+				
+				document.getElementById("dizzy").style.zIndex = "0";
+				document.getElementById("dizzy").style.opacity = "0";
+			}
+			
+			function showNormal() {
+				document.getElementById("happy").style.zIndex = "1";
+				document.getElementById("happy").style.opacity = "0";
+				
+				document.getElementById("normal").style.zIndex = "2";
+				document.getElementById("normal").style.opacity = "1";
+				
+				document.getElementById("dizzy").style.zIndex = "0";
+				document.getElementById("dizzy").style.opacity = "0";
+			}
+		</script>
 	</head>
 	<body>
 		<span style="opacity: 0.6; position: absolute; left: 15%; top: 20%; font-size: 48pt; font-family: 'Zeyada';">Ket, nnojo'i.</span>
 		<span style="opacity: 0.6; position: absolute; left: 15%; top: 30%; font-size: 36pt; font-family: 'Zeyada';">Alyanel'ap, tanaka ez silhha ben.</span>
-		<img src="https://i.ibb.co/xhFCWhs/Rhian-Normal.png" alt="Rhian-Normal" border="0" style="position: absolute; right: 5%; bottom: 5%; width: 3%; height: auto;" />
+		<img id="happy" src="https://i.ibb.co/fnvbrfg/Rhian-Happy.png" alt="Rhian-Happy" border="0" onmousedown="showDizzy()" onmouseleave="showNormal()" style="position: absolute; right: 5%; bottom: 5%; width: 3%; height: auto;" />
+		<img id="normal" src="https://i.ibb.co/xhFCWhs/Rhian-Normal.png" alt="Rhian-Normal" border="0" onmouseenter="showHappy()" style="position: absolute; right: 5%; bottom: 5%; width: 3%; height: auto;" />
+		<img id="dizzy" src="https://i.ibb.co/7gGmxz9/RhiDizzy.png" alt="RhiDizzy" border="0" onmouseup="showHappy()" onmouseleave="showNormal()" style="position: absolute; right: 5%; bottom: 5%; width: 3%; height: auto;" />
 	</body>
 </html>
