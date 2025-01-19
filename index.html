@@ -1,87 +1,96 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>Taica et al.</title>
-		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
-			
-			body {
-				background: #330033;
-				color: #cccccc;
-			}
-			
-			a {
-				color: #eeeeee;
-			}
-			
-			#happy {
-				-webkit-transition: all 0.5s ease;
-				-moz-transition: all 0.5s ease;
-				-o-transition: all 0.5s ease;
-				transition: all 0.5s ease;
-				opacity: 0;
-				z-index: 1;
-			}
-			
-			#normal {
-				-webkit-transition: all 0.5s ease;
-				-moz-transition: all 0.5s ease;
-				-o-transition: all 0.5s ease;
-				transition: all 0.5s ease;
-				opacity: 1;
-				z-index: 2;
-			}
-			
-			#dizzy {
-				-webkit-transition: all 0.5s ease;
-				-moz-transition: all 0.5s ease;
-				-o-transition: all 0.5s ease;
-				transition: all 0.5s ease;
-				opacity: 0;
-				z-index: 0;
-			}
-		</style>
-		<script type="text/javascript">
-			function showDizzy() {
-				document.getElementById("happy").style.zIndex = "0";
-				document.getElementById("happy").style.opacity = "0";
-				
-				document.getElementById("normal").style.zIndex = "1";
-				document.getElementById("normal").style.opacity = "0";
-				
-				document.getElementById("dizzy").style.zIndex = "2";
-				document.getElementById("dizzy").style.opacity = "1";
-			}
-			
-			function showHappy() {
-				document.getElementById("happy").style.zIndex = "2";
-				document.getElementById("happy").style.opacity = "1";
-				
-				document.getElementById("normal").style.zIndex = "1";
-				document.getElementById("normal").style.opacity = "0";
-				
-				document.getElementById("dizzy").style.zIndex = "0";
-				document.getElementById("dizzy").style.opacity = "0";
-			}
-			
-			function showNormal() {
-				document.getElementById("happy").style.zIndex = "1";
-				document.getElementById("happy").style.opacity = "0";
-				
-				document.getElementById("normal").style.zIndex = "2";
-				document.getElementById("normal").style.opacity = "1";
-				
-				document.getElementById("dizzy").style.zIndex = "0";
-				document.getElementById("dizzy").style.opacity = "0";
-			}
-		</script>
-	</head>
-	<body>
-		<span style="opacity: 0.6; position: absolute; left: 15%; top: 20%; font-size: 48pt; font-family: 'Zeyada';">Ket, nnojo'i.</span>
-		<span style="opacity: 0.6; position: absolute; left: 15%; top: 30%; font-size: 36pt; font-family: 'Zeyada';"><a href="https://github.com/Taicanium">Alyanel'ap, tanakaz silhha ben.</a></span>
-		<img id="happy" src="https://i.ibb.co/fnvbrfg/Rhian-Happy.png" alt="Rhian-Happy" border="0" onmousedown="showDizzy()" onmouseleave="showNormal()" style="position: absolute; right: 5%; bottom: 5%; width: 3%; height: auto;" />
-		<img id="normal" src="https://i.ibb.co/xhFCWhs/Rhian-Normal.png" alt="Rhian-Normal" border="0" onmouseenter="showHappy()" style="position: absolute; right: 5%; bottom: 5%; width: 3%; height: auto;" />
-		<img id="dizzy" src="https://i.ibb.co/7gGmxz9/RhiDizzy.png" alt="RhiDizzy" border="0" onmouseup="showHappy()" onmouseleave="showNormal()" style="position: absolute; right: 5%; bottom: 5%; width: 3%; height: auto;" />
-	</body>
+<head>
+<meta charset="utf-8" />
+<title>Taica et al.</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat&family=Zeyada&display=swap');
+
+body {
+background: #330033;
+color: #cccccc;
+}
+
+a {
+color: #eeeeee;
+}
+
+.smalltext {
+font-family: "Montserrat", serif;
+font-optical-sizing: auto;
+font-size: 9pt;
+font-style: normal;
+font-weight: 400;
+}
+
+#happy {
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+opacity: 0;
+z-index: 1;
+}
+
+#normal {
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+opacity: 1;
+z-index: 2;
+}
+
+#dizzy {
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+opacity: 0;
+z-index: 0;
+}
+</style>
+<script type="text/javascript">
+function showDizzy() {
+document.getElementById("happy").style.zIndex = "0";
+document.getElementById("happy").style.opacity = "0";
+
+document.getElementById("normal").style.zIndex = "1";
+document.getElementById("normal").style.opacity = "0";
+
+document.getElementById("dizzy").style.zIndex = "2";
+document.getElementById("dizzy").style.opacity = "1";
+}
+
+function showHappy() {
+document.getElementById("happy").style.zIndex = "2";
+document.getElementById("happy").style.opacity = "1";
+
+document.getElementById("normal").style.zIndex = "1";
+document.getElementById("normal").style.opacity = "0";
+
+document.getElementById("dizzy").style.zIndex = "0";
+document.getElementById("dizzy").style.opacity = "0";
+}
+
+function showNormal() {
+document.getElementById("happy").style.zIndex = "1";
+document.getElementById("happy").style.opacity = "0";
+
+document.getElementById("normal").style.zIndex = "2";
+document.getElementById("normal").style.opacity = "1";
+
+document.getElementById("dizzy").style.zIndex = "0";
+document.getElementById("dizzy").style.opacity = "0";
+}
+</script>
+</head>
+<body>
+<span style="opacity: 0.6; position: absolute; left: 15%; top: 20%; font-size: 48pt; font-family: 'Zeyada';">Ket, nnojo'i.</span>
+<span style="opacity: 0.6; position: absolute; left: 15%; top: 30%; font-size: 36pt; font-family: 'Zeyada';"><a href="https://github.com/Taicanium">Alyanel'ap, tanakaz silhha ben.</a></span>
+<span style="position: absolute; left: 15%; top: 50%; font-family: Montserrat;" class="smalltext">For business inquiries: <a href="mailto:burnshire98@gmail.com">burnshire98@gmail.com</a></span>
+<img id="happy" src="https://i.ibb.co/fnvbrfg/Rhian-Happy.png" alt="Rhian-Happy" border="0" onmousedown="showDizzy()" onmouseleave="showNormal()" style="position: absolute; right: 5%; bottom: 5%; width: 3%; height: auto;" />
+<img id="normal" src="https://i.ibb.co/xhFCWhs/Rhian-Normal.png" alt="Rhian-Normal" border="0" onmouseenter="showHappy()" style="position: absolute; right: 5%; bottom: 5%; width: 3%; height: auto;" />
+<img id="dizzy" src="https://i.ibb.co/7gGmxz9/RhiDizzy.png" alt="RhiDizzy" border="0" onmouseup="showHappy()" onmouseleave="showNormal()" style="position: absolute; right: 5%; bottom: 5%; width: 3%; height: auto;" />
+</body>
 </html>
